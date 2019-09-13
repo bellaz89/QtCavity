@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>921</width>
+    <width>958</width>
     <height>896</height>
    </rect>
   </property>
@@ -49,18 +49,21 @@
       </item>
       <item>
        <layout class="QGridLayout" name="gridLayout_3">
-        <item row="1" column="0">
+        <item row="1" column="1">
          <layout class="QHBoxLayout" name="horizontalLayout_11">
           <item>
-           <widget class="QDoubleSpinBox" name="frequency">
-            <property name="decimals">
-             <number>2</number>
+           <widget class="QLineEdit" name="frequency">
+            <property name="minimumSize">
+             <size>
+              <width>120</width>
+              <height>0</height>
+             </size>
             </property>
-            <property name="maximum">
-             <double>99999.000000000000000</double>
-            </property>
-            <property name="value">
-             <double>1300.000000000000000</double>
+            <property name="maximumSize">
+             <size>
+              <width>120</width>
+              <height>120</height>
+             </size>
             </property>
            </widget>
           </item>
@@ -86,15 +89,21 @@
           </item>
          </layout>
         </item>
-        <item row="1" column="2">
+        <item row="1" column="3">
          <layout class="QHBoxLayout" name="horizontalLayout_13">
           <item>
-           <widget class="QDoubleSpinBox" name="roq">
-            <property name="maximum">
-             <double>100000.000000000000000</double>
+           <widget class="QLineEdit" name="roq">
+            <property name="minimumSize">
+             <size>
+              <width>120</width>
+              <height>0</height>
+             </size>
             </property>
-            <property name="value">
-             <double>1024.000000000000000</double>
+            <property name="maximumSize">
+             <size>
+              <width>120</width>
+              <height>16777215</height>
+             </size>
             </property>
            </widget>
           </item>
@@ -120,15 +129,21 @@
           </item>
          </layout>
         </item>
-        <item row="2" column="2">
+        <item row="2" column="3">
          <layout class="QHBoxLayout" name="horizontalLayout_18">
           <item>
-           <widget class="QDoubleSpinBox" name="q0">
-            <property name="maximum">
-             <double>1000000000000.000000000000000</double>
+           <widget class="QLineEdit" name="q0">
+            <property name="minimumSize">
+             <size>
+              <width>120</width>
+              <height>0</height>
+             </size>
             </property>
-            <property name="value">
-             <double>10000000000.000000000000000</double>
+            <property name="maximumSize">
+             <size>
+              <width>120</width>
+              <height>16777215</height>
+             </size>
             </property>
            </widget>
           </item>
@@ -154,20 +169,26 @@
           </item>
          </layout>
         </item>
-        <item row="2" column="0">
+        <item row="2" column="1">
          <layout class="QHBoxLayout" name="horizontalLayout_17">
           <item>
-           <widget class="QDoubleSpinBox" name="length">
-            <property name="decimals">
-             <number>5</number>
+           <widget class="QLineEdit" name="length">
+            <property name="minimumSize">
+             <size>
+              <width>120</width>
+              <height>0</height>
+             </size>
             </property>
-            <property name="value">
-             <double>1.000000000000000</double>
+            <property name="maximumSize">
+             <size>
+              <width>120</width>
+              <height>16777215</height>
+             </size>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QLabel" name="label_11">
+           <widget class="QLabel" name="length3">
             <property name="text">
              <string>Length [m]</string>
             </property>
@@ -188,23 +209,26 @@
           </item>
          </layout>
         </item>
-        <item row="4" column="0">
+        <item row="4" column="1">
          <layout class="QHBoxLayout" name="horizontalLayout_12">
           <item>
-           <widget class="QDoubleSpinBox" name="detuning">
-            <property name="decimals">
-             <number>3</number>
+           <widget class="QLineEdit" name="detuning">
+            <property name="minimumSize">
+             <size>
+              <width>120</width>
+              <height>0</height>
+             </size>
             </property>
-            <property name="minimum">
-             <double>-1000000.000000000000000</double>
-            </property>
-            <property name="maximum">
-             <double>1000000.000000000000000</double>
+            <property name="maximumSize">
+             <size>
+              <width>120</width>
+              <height>16777215</height>
+             </size>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QLabel" name="label_13">
+           <widget class="QLabel" name="detuning_3">
             <property name="text">
              <string>Detuning [Hz]</string>
             </property>
@@ -225,20 +249,26 @@
           </item>
          </layout>
         </item>
-        <item row="4" column="2">
+        <item row="4" column="3">
          <layout class="QHBoxLayout" name="horizontalLayout_15">
           <item>
-           <widget class="QDoubleSpinBox" name="detuning_angle">
-            <property name="minimum">
-             <double>-179.000000000000000</double>
+           <widget class="QLineEdit" name="detuning_angle">
+            <property name="minimumSize">
+             <size>
+              <width>120</width>
+              <height>0</height>
+             </size>
             </property>
-            <property name="maximum">
-             <double>179.000000000000000</double>
+            <property name="maximumSize">
+             <size>
+              <width>120</width>
+              <height>16777215</height>
+             </size>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QLabel" name="label_14">
+           <widget class="QLabel" name="detuning_angled">
             <property name="text">
              <string>Detuning angle [deg]</string>
             </property>
@@ -290,12 +320,18 @@
         <item row="0" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout_16">
           <item>
-           <widget class="QDoubleSpinBox" name="qext">
-            <property name="maximum">
-             <double>1000000000000.000000000000000</double>
+           <widget class="QLineEdit" name="qext">
+            <property name="minimumSize">
+             <size>
+              <width>120</width>
+              <height>0</height>
+             </size>
             </property>
-            <property name="value">
-             <double>5000000.000000000000000</double>
+            <property name="maximumSize">
+             <size>
+              <width>120</width>
+              <height>16777215</height>
+             </size>
             </property>
            </widget>
           </item>
@@ -324,12 +360,18 @@
         <item row="1" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout_23">
           <item>
-           <widget class="QDoubleSpinBox" name="beta">
-            <property name="decimals">
-             <number>4</number>
+           <widget class="QLineEdit" name="beta">
+            <property name="minimumSize">
+             <size>
+              <width>120</width>
+              <height>0</height>
+             </size>
             </property>
-            <property name="maximum">
-             <double>100000.000000000000000</double>
+            <property name="maximumSize">
+             <size>
+              <width>120</width>
+              <height>16777215</height>
+             </size>
             </property>
            </widget>
           </item>
@@ -358,12 +400,18 @@
         <item row="0" column="1">
          <layout class="QHBoxLayout" name="horizontalLayout_20">
           <item>
-           <widget class="QDoubleSpinBox" name="line_impedance">
-            <property name="maximum">
-             <double>1000.000000000000000</double>
+           <widget class="QLineEdit" name="line_impedance">
+            <property name="minimumSize">
+             <size>
+              <width>120</width>
+              <height>0</height>
+             </size>
             </property>
-            <property name="value">
-             <double>50.000000000000000</double>
+            <property name="maximumSize">
+             <size>
+              <width>120</width>
+              <height>16777215</height>
+             </size>
             </property>
            </widget>
           </item>
@@ -392,9 +440,18 @@
         <item row="1" column="1">
          <layout class="QHBoxLayout" name="horizontalLayout_22">
           <item>
-           <widget class="QDoubleSpinBox" name="turn_ratio">
-            <property name="maximum">
-             <double>1000000000000.000000000000000</double>
+           <widget class="QLineEdit" name="turn_ratio">
+            <property name="minimumSize">
+             <size>
+              <width>120</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>120</width>
+              <height>16777215</height>
+             </size>
             </property>
            </widget>
           </item>
@@ -451,15 +508,18 @@
         <item row="0" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout_24">
           <item>
-           <widget class="QDoubleSpinBox" name="fill_time">
-            <property name="decimals">
-             <number>6</number>
+           <widget class="QLineEdit" name="fill_time">
+            <property name="minimumSize">
+             <size>
+              <width>120</width>
+              <height>0</height>
+             </size>
             </property>
-            <property name="maximum">
-             <double>10000.000000000000000</double>
-            </property>
-            <property name="value">
-             <double>100.000000000000000</double>
+            <property name="maximumSize">
+             <size>
+              <width>120</width>
+              <height>16777215</height>
+             </size>
             </property>
            </widget>
           </item>
@@ -488,19 +548,25 @@
         <item row="1" column="1">
          <layout class="QHBoxLayout" name="horizontalLayout_32">
           <item>
-           <widget class="QDoubleSpinBox" name="fill_gradient">
-            <property name="maximum">
-             <double>10000.000000000000000</double>
+           <widget class="QLineEdit" name="fill_gradient">
+            <property name="minimumSize">
+             <size>
+              <width>120</width>
+              <height>0</height>
+             </size>
             </property>
-            <property name="value">
-             <double>10.000000000000000</double>
+            <property name="maximumSize">
+             <size>
+              <width>120</width>
+              <height>16777215</height>
+             </size>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QLabel" name="label_22">
             <property name="text">
-             <string>Steady state gradient  [MV/m]</string>
+             <string>Steady state gradient  [V/m]</string>
             </property>
            </widget>
           </item>
@@ -522,9 +588,18 @@
         <item row="1" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout_31">
           <item>
-           <widget class="QDoubleSpinBox" name="fill_voltage">
-            <property name="maximum">
-             <double>1000000.000000000000000</double>
+           <widget class="QLineEdit" name="fill_voltage">
+            <property name="minimumSize">
+             <size>
+              <width>120</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>120</width>
+              <height>16777215</height>
+             </size>
             </property>
            </widget>
           </item>
@@ -553,9 +628,18 @@
         <item row="0" column="1">
          <layout class="QHBoxLayout" name="horizontalLayout_28">
           <item>
-           <widget class="QDoubleSpinBox" name="fill_power">
-            <property name="maximum">
-             <double>1000000000.000000000000000</double>
+           <widget class="QLineEdit" name="fill_power">
+            <property name="minimumSize">
+             <size>
+              <width>120</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>120</width>
+              <height>16777215</height>
+             </size>
             </property>
            </widget>
           </item>
@@ -649,9 +733,18 @@
         <item row="1" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout_14">
           <item>
-           <widget class="QDoubleSpinBox" name="flat_voltage">
-            <property name="maximum">
-             <double>1000000.000000000000000</double>
+           <widget class="QLineEdit" name="flat_voltage">
+            <property name="minimumSize">
+             <size>
+              <width>120</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>120</width>
+              <height>16777215</height>
+             </size>
             </property>
            </widget>
           </item>
@@ -680,15 +773,18 @@
         <item row="0" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout_19">
           <item>
-           <widget class="QDoubleSpinBox" name="flat_time">
-            <property name="decimals">
-             <number>6</number>
+           <widget class="QLineEdit" name="flat_time">
+            <property name="minimumSize">
+             <size>
+              <width>120</width>
+              <height>0</height>
+             </size>
             </property>
-            <property name="maximum">
-             <double>10000.000000000000000</double>
-            </property>
-            <property name="value">
-             <double>100.000000000000000</double>
+            <property name="maximumSize">
+             <size>
+              <width>120</width>
+              <height>16777215</height>
+             </size>
             </property>
            </widget>
           </item>
@@ -717,9 +813,18 @@
         <item row="0" column="1">
          <layout class="QHBoxLayout" name="horizontalLayout_42">
           <item>
-           <widget class="QDoubleSpinBox" name="flat_power">
-            <property name="maximum">
-             <double>1000000000.000000000000000</double>
+           <widget class="QLineEdit" name="flat_power">
+            <property name="minimumSize">
+             <size>
+              <width>120</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>120</width>
+              <height>16777215</height>
+             </size>
             </property>
            </widget>
           </item>
@@ -748,34 +853,27 @@
         <item row="1" column="1">
          <layout class="QHBoxLayout" name="horizontalLayout_43">
           <item>
-           <widget class="QDoubleSpinBox" name="flat_gradient">
-            <property name="maximum">
-             <double>10000.000000000000000</double>
+           <widget class="QLineEdit" name="flat_gradient">
+            <property name="minimumSize">
+             <size>
+              <width>120</width>
+              <height>0</height>
+             </size>
             </property>
-            <property name="value">
-             <double>10.000000000000000</double>
+            <property name="maximumSize">
+             <size>
+              <width>120</width>
+              <height>16777215</height>
+             </size>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QLabel" name="label_26">
             <property name="text">
-             <string>Steady state gradient [MV/m]</string>
+             <string>Steady state gradient [V/m]</string>
             </property>
            </widget>
-          </item>
-          <item>
-           <spacer name="horizontalSpacer_33">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
           </item>
           <item>
            <spacer name="horizontalSpacer_32">
@@ -823,15 +921,18 @@
         <item row="0" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout_33">
           <item>
-           <widget class="QDoubleSpinBox" name="decay_time">
-            <property name="decimals">
-             <number>6</number>
+           <widget class="QLineEdit" name="decay_time">
+            <property name="maximumSize">
+             <size>
+              <width>120</width>
+              <height>16777215</height>
+             </size>
             </property>
-            <property name="maximum">
-             <double>10000.000000000000000</double>
-            </property>
-            <property name="value">
-             <double>100.000000000000000</double>
+            <property name="sizeIncrement">
+             <size>
+              <width>120</width>
+              <height>0</height>
+             </size>
             </property>
            </widget>
           </item>
@@ -860,9 +961,18 @@
         <item row="1" column="1">
          <layout class="QHBoxLayout" name="horizontalLayout_39">
           <item>
-           <widget class="QDoubleSpinBox" name="ql">
-            <property name="maximum">
-             <double>1000000000000.000000000000000</double>
+           <widget class="QLineEdit" name="ql">
+            <property name="minimumSize">
+             <size>
+              <width>120</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>120</width>
+              <height>16777215</height>
+             </size>
             </property>
            </widget>
           </item>
@@ -891,9 +1001,24 @@
         <item row="1" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout_25">
           <item>
-           <widget class="QDoubleSpinBox" name="bandwidth">
-            <property name="maximum">
-             <double>1000000.000000000000000</double>
+           <widget class="QLineEdit" name="bandwidth">
+            <property name="minimumSize">
+             <size>
+              <width>120</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>120</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="sizeIncrement">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
             </property>
            </widget>
           </item>
@@ -922,12 +1047,18 @@
         <item row="0" column="1">
          <layout class="QHBoxLayout" name="horizontalLayout_41">
           <item>
-           <widget class="QDoubleSpinBox" name="decay_tau">
-            <property name="maximum">
-             <double>10000.000000000000000</double>
+           <widget class="QLineEdit" name="decay_tau">
+            <property name="minimumSize">
+             <size>
+              <width>120</width>
+              <height>0</height>
+             </size>
             </property>
-            <property name="value">
-             <double>100.000000000000000</double>
+            <property name="maximumSize">
+             <size>
+              <width>120</width>
+              <height>16777215</height>
+             </size>
             </property>
            </widget>
           </item>
@@ -940,40 +1071,6 @@
           </item>
           <item>
            <spacer name="horizontalSpacer_23">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-         </layout>
-        </item>
-        <item row="2" column="0">
-         <layout class="QHBoxLayout" name="horizontalLayout_46">
-          <item>
-           <widget class="QDoubleSpinBox" name="n_tau">
-            <property name="maximum">
-             <double>1000.000000000000000</double>
-            </property>
-            <property name="value">
-             <double>0.000000000000000</double>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLabel" name="label_38">
-            <property name="text">
-             <string>Time [x tau]</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <spacer name="horizontalSpacer_22">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -1100,7 +1197,7 @@
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_9">
         <item>
-         <widget class="QSpinBox" name="spinBox">
+         <widget class="QSpinBox" name="simulation_points">
           <property name="maximum">
            <number>1000000</number>
           </property>
@@ -1130,7 +1227,7 @@
          </spacer>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton">
+         <widget class="QPushButton" name="load">
           <property name="text">
            <string>Load</string>
           </property>
@@ -1150,9 +1247,49 @@
          </spacer>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton_2">
+         <widget class="QPushButton" name="save">
           <property name="text">
            <string>Save</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_8">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="save_data">
+          <property name="text">
+           <string>Save data</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_9">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="simulate">
+          <property name="text">
+           <string>Simulate</string>
           </property>
          </widget>
         </item>
@@ -1165,7 +1302,7 @@
     <widget class="QWidget" name="widget_2" native="true">
      <layout class="QVBoxLayout" name="verticalLayout_8">
       <item>
-       <widget class="QTabWidget" name="tabWidget">
+       <widget class="QTabWidget" name="layout">
         <property name="currentIndex">
          <number>0</number>
         </property>
@@ -1175,10 +1312,7 @@
          </attribute>
          <layout class="QVBoxLayout" name="verticalLayout">
           <item>
-           <widget class="QGraphicsView" name="graphicsView"/>
-          </item>
-          <item>
-           <widget class="QGraphicsView" name="graphicsView_2"/>
+           <layout class="QVBoxLayout" name="gradient_layout"/>
           </item>
           <item>
            <spacer name="verticalSpacer">
@@ -1201,10 +1335,7 @@
          </attribute>
          <layout class="QVBoxLayout" name="verticalLayout_6">
           <item>
-           <widget class="QGraphicsView" name="graphicsView_4"/>
-          </item>
-          <item>
-           <widget class="QGraphicsView" name="graphicsView_3"/>
+           <layout class="QVBoxLayout" name="energy_layout"/>
           </item>
           <item>
            <spacer name="verticalSpacer_2">
@@ -1227,10 +1358,7 @@
          </attribute>
          <layout class="QVBoxLayout" name="verticalLayout_7">
           <item>
-           <widget class="QGraphicsView" name="graphicsView_6"/>
-          </item>
-          <item>
-           <widget class="QGraphicsView" name="graphicsView_5"/>
+           <layout class="QVBoxLayout" name="phase_layout"/>
           </item>
           <item>
            <spacer name="verticalSpacer_3">
@@ -1246,6 +1374,11 @@
            </spacer>
           </item>
          </layout>
+        </widget>
+        <widget class="QWidget" name="tab">
+         <attribute name="title">
+          <string>Cavities</string>
+         </attribute>
         </widget>
        </widget>
       </item>
@@ -1311,36 +1444,48 @@
          <layout class="QVBoxLayout" name="verticalLayout_10">
           <item>
            <widget class="QLabel" name="label_33">
+            <property name="minimumSize">
+             <size>
+              <width>120</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
             <property name="text">
-             <string>TextLabel</string>
+             <string/>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QLabel" name="label_43">
             <property name="text">
-             <string>TextLabel</string>
+             <string/>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QLabel" name="label_42">
             <property name="text">
-             <string>TextLabel</string>
+             <string/>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QLabel" name="label_41">
             <property name="text">
-             <string>TextLabel</string>
+             <string/>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QLabel" name="label_40">
             <property name="text">
-             <string>TextLabel</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -1350,36 +1495,42 @@
          <layout class="QVBoxLayout" name="verticalLayout_9">
           <item>
            <widget class="QLabel" name="label_39">
+            <property name="minimumSize">
+             <size>
+              <width>120</width>
+              <height>0</height>
+             </size>
+            </property>
             <property name="text">
-             <string>TextLabel</string>
+             <string/>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QLabel" name="label_37">
             <property name="text">
-             <string>TextLabel</string>
+             <string/>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QLabel" name="label_36">
             <property name="text">
-             <string>TextLabel</string>
+             <string/>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QLabel" name="label_35">
             <property name="text">
-             <string>TextLabel</string>
+             <string/>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QLabel" name="label_32">
             <property name="text">
-             <string>TextLabel</string>
+             <string/>
             </property>
            </widget>
           </item>
