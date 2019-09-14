@@ -27,3 +27,14 @@ def save_data(fname, gui):
                     gui.fwd_phase_trace]).transpose()
 
     np.savetxt(fname, data, fmt='%.4E', delimiter=',', header=header)
+
+def save(fname, gui):
+    params = {}
+    core = {}
+    additional = {}
+    
+    params['core'] = core
+    params['additional'] = additional
+    
+
+def load(fname, gui):
