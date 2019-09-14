@@ -1,0 +1,12 @@
+README.md
+setup.py
+QtCavity.egg-info/PKG-INFO
+QtCavity.egg-info/SOURCES.txt
+QtCavity.egg-info/dependency_links.txt
+QtCavity.egg-info/entry_points.txt
+QtCavity.egg-info/not-zip-safe
+QtCavity.egg-info/top_level.txt
+qtcavity/__init__.py
+qtcavity/main.py
+qtcavity/simulate.py
+qtcavity/resources/qtcavity.ui

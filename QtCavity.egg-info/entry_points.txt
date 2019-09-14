@@ -1,0 +1,3 @@
+[gui_scripts]
+qtcavity = qtcavity.main:main
+

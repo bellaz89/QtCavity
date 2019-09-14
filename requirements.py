@@ -1,0 +1,6 @@
+python>=3.6
+numpy>=1.16
+scipy>=1.3
+matplotlib>=3.1
+pyqt>=5.9
+toml>=0.10

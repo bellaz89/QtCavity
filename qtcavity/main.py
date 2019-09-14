@@ -1,17 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import sys
-import os
+import os, sys
 from PyQt5 import QtWidgets, uic, QtGui
 from PyQt5.QtWidgets import QFileDialog
 from PyQt5.QtGui import QDoubleValidator
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
 from matplotlib.figure import Figure
-from simulate import simulate
-
+from .simulate import simulate
 import numpy as np
-
+import qtcavity
 
 class QtCavity(QtWidgets.QMainWindow):
     '''
@@ -24,7 +22,9 @@ class QtCavity(QtWidgets.QMainWindow):
         super(QtCavity, self).__init__()
         
         cwidget = QtWidgets.QWidget(self)
-        self.ui = uic.loadUi("QtCavity.ui", cwidget)
+        self.ui = uic.loadUi(os.path.join(qtcavity.__path__[0], 
+                                          'resources', 
+                                          'qtcavity.ui'), cwidget)
         ui = self.ui
         self.setCentralWidget(cwidget)
         self.show() 
