@@ -9,7 +9,7 @@ from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as Navigatio
 from matplotlib.figure import Figure
 from .simulate import simulate
 import numpy as np
-#import qtcavity
+import qtcavity
 
 class QtCavity(QtWidgets.QMainWindow):
     '''
