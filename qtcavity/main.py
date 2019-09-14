@@ -2,14 +2,15 @@
 # -*- coding: utf-8 -*-
 import os, sys
 from PyQt5 import QtWidgets, uic, QtGui
-from PyQt5.QtWidgets import QFileDialog, QSizePolicy
+from PyQt5.QtWidgets import QFileDialog, QSizePolicy, QMessageBox
 from PyQt5.QtGui import QDoubleValidator
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
 from matplotlib.figure import Figure
-from .simulate import simulate
 import numpy as np
 import qtcavity
+from .simulate import simulate
+from .file_manager import save_data
 
 class QtCavity(QtWidgets.QMainWindow):
     '''
@@ -143,7 +144,17 @@ class QtCavity(QtWidgets.QMainWindow):
         fname = QFileDialog.getSaveFileName(self, 'Save file', os.getcwd(), "TOML (*.toml)")
 
     def on_save_data_button(self):
-        fname = QFileDialog.getSaveFileName(self, 'Save file', os.getcwd(), "CSV (*.csv)")
+        
+        fname = QFileDialog.getSaveFileName(self, 'Save file', os.getcwd(), "CSV (*.csv)")  
+        try:
+            save_data(fname[0], self)
+        except Exception as e:
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Critical)
+            msg.setText("Error")
+            msg.setInformativeText(str(e))
+            msg.setWindowTitle("Error")
+            msg.exec_()
 
     def on_simulate_button(self):
         simulate(self)
