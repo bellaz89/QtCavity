@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import sys
 import os
-from PyQt5 import QtWidgets, uic
+from PyQt5 import QtWidgets, uic, QtGui
 from PyQt5.QtWidgets import QFileDialog
 from PyQt5.QtGui import QDoubleValidator
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
@@ -107,10 +107,14 @@ class QtCavity(QtWidgets.QMainWindow):
         self.ui.phase_layout.addWidget(self.phase_canvas)
         self.ui.phase_layout.addStretch(1)
         self.ui.phase_layout.addWidget(self.phase_toolbar)
-        
+
+        self.gradient_canvas.setSizePolicy(QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Expanding))
+
         self.energy_ax = self.energy_figure.add_subplot(111)
         self.gradient_ax = self.gradient_figure.add_subplot(111)
         self.phase_ax = self.phase_figure.add_subplot(111)
+        self.energy_ax_twinx = self.energy_ax.twinx()
+        self.gradient_ax_twinx = self.gradient_ax.twinx()
 
         self.fill_time = 0.001
         self.fill_time = 0.001
@@ -200,28 +204,59 @@ class QtCavity(QtWidgets.QMainWindow):
         energy_ax = self.energy_ax
         gradient_ax = self.gradient_ax
         phase_ax = self.phase_ax
-        
+        energy_ax_twinx = self.energy_ax_twinx
+        gradient_ax_twinx = self.gradient_ax_twinx
+
         energy_ax.clear()
         gradient_ax.clear()
         phase_ax.clear()
-        
+        energy_ax_twinx.clear()
+        gradient_ax_twinx.clear()
+
         self.energy_canvas.draw()
         self.gradient_canvas.draw()
         self.phase_canvas.draw()
 
-        energy_ax.plot(self.time_trace, self.fwd_power_trace, 
-                       label='Forward power')
-        gradient_ax.plot(self.time_trace, self.fwd_voltage_trace, 
-                         label='Forward voltage')
+        cav_en = energy_ax.plot(self.time_trace, self.cavity_energy_trace, 
+                       'r', label='Cavity energy')
+        cav_vol = gradient_ax.plot(self.time_trace, self.cavity_gradient_trace, 
+                         'r', label='Cavity gradient')
+        phase_ax.plot(self.time_trace, self.cavity_phase_trace, 
+                      'r', label='Cavity phase')
+ 
+        for_en = energy_ax_twinx.plot(self.time_trace, self.fwd_power_trace, 
+                       'g', label='Forward power')
+        for_vol = gradient_ax_twinx.plot(self.time_trace, self.fwd_voltage_trace, 
+                         'g', label='Forward voltage')
         phase_ax.plot(self.time_trace, self.fwd_phase_trace, 
-                      label='Forward phase')
+                      'g', label='Forward phase')
+ 
+        ref_en = energy_ax_twinx.plot(self.time_trace, self.refl_power_trace,
+                       'b', label='Reflected power')
+        ref_vol = gradient_ax_twinx.plot(self.time_trace, self.refl_voltage_trace, 
+                         'b', label='Reflected voltage')
+        phase_ax.plot(self.time_trace, self.refl_phase_trace, 
+                      'b', label='Reflected phase')
         
+        en_s = cav_en + for_en + ref_en
+        vol_s = cav_vol + for_vol + ref_vol
+
+        enabs = [l.get_label() for l in en_s]
+        volabs = [l.get_label() for l in vol_s]
+
         energy_ax.set_xlabel('Time [s]')
         gradient_ax.set_xlabel('Time [s]')
         phase_ax.set_xlabel('Time [s]')
 
-        energy_ax.legend()
-        gradient_ax.legend()
+        energy_ax.set_ylabel('Energy [J]')
+        gradient_ax.set_ylabel('Gradient [V/m]')
+
+        energy_ax_twinx.set_ylabel('Power [W]')
+        gradient_ax_twinx.set_ylabel('Voltage [V]')
+
+
+        energy_ax.legend(en_s, enabs, bbox_to_anchor=(0, 1.01), loc='lower left', ncol=1)
+        gradient_ax.legend(vol_s, volabs, bbox_to_anchor=(0, 1.01), loc='lower left', ncol=1)
         phase_ax.legend()
 
         self.energy_canvas.draw()
