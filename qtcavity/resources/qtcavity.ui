@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1228</width>
-    <height>681</height>
+    <width>1238</width>
+    <height>746</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,6 +21,12 @@
        <horstretch>0</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>630</width>
+       <height>16777215</height>
+      </size>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_5">
       <item>
@@ -494,11 +500,37 @@
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_36">
         <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
          <widget class="QCheckBox" name="checkBox_5">
           <property name="text">
            <string>Lock with flattop</string>
           </property>
          </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
         </item>
        </layout>
       </item>
@@ -880,6 +912,12 @@
      <layout class="QVBoxLayout" name="verticalLayout_8">
       <item>
        <widget class="QTabWidget" name="layout">
+        <property name="minimumSize">
+         <size>
+          <width>640</width>
+          <height>480</height>
+         </size>
+        </property>
         <property name="currentIndex">
          <number>0</number>
         </property>

@@ -2,14 +2,14 @@
 # -*- coding: utf-8 -*-
 import os, sys
 from PyQt5 import QtWidgets, uic, QtGui
-from PyQt5.QtWidgets import QFileDialog
+from PyQt5.QtWidgets import QFileDialog, QSizePolicy
 from PyQt5.QtGui import QDoubleValidator
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
 from matplotlib.figure import Figure
 from .simulate import simulate
 import numpy as np
-import qtcavity
+#import qtcavity
 
 class QtCavity(QtWidgets.QMainWindow):
     '''
@@ -25,6 +25,7 @@ class QtCavity(QtWidgets.QMainWindow):
         self.ui = uic.loadUi(os.path.join(qtcavity.__path__[0], 
                                           'resources', 
                                           'qtcavity.ui'), cwidget)
+
         ui = self.ui
         self.setCentralWidget(cwidget)
         self.show() 
@@ -87,7 +88,8 @@ class QtCavity(QtWidgets.QMainWindow):
         ui.fill_gradient.setValidator(QDoubleValidator(0, 1e15, 4))
         ui.flat_gradient.setValidator(QDoubleValidator(0, 1e15, 4))
 
-        self.gradient_figure = Figure()
+        self.gradient_figure = Figure(figsize=(6.4, 6.4))
+        self.gradient_figure.subplots_adjust(left=0.15,right=0.85,bottom=0.2,top=0.8)
         self.gradient_canvas = FigureCanvas(self.gradient_figure)
         self.gradient_toolbar = NavigationToolbar(self.gradient_canvas, self)
         self.ui.gradient_layout.addWidget(self.gradient_canvas)
@@ -108,7 +110,7 @@ class QtCavity(QtWidgets.QMainWindow):
         self.ui.phase_layout.addStretch(1)
         self.ui.phase_layout.addWidget(self.phase_toolbar)
 
-        self.gradient_canvas.setSizePolicy(QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Expanding))
+        self.gradient_canvas.setSizePolicy(QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding))
 
         self.energy_ax = self.energy_figure.add_subplot(111)
         self.gradient_ax = self.gradient_figure.add_subplot(111)
